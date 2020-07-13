@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kodie's Taco Cat Mini-project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .elWide {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/pages/Index.html">Taco Cat Mini-Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/pages/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">The Exercise</h1>
+                <p class="lead">TACO CAT</p>
+                <ul class="list-unstyled">
+                    <li>The Taco Cat mini-project requires the user to enter a single word or phrase</li>
+                    <li>The algorithm will strip spaces and lowercase all user input</li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-3">
+                <input id="txtTC" type="text" placeholder="Enter Word or Phrase" class="elWide" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button id="btnTC" class="btn btn-dark elWide">Submit!</button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col">
+                <p id="pHide">I've gone ahead and removed all spaces and special characters to achieve better results.</p>
+                <p id="pTC"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button id="btnClear" class="btn btn-success elWide">Clear!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <script>
+        // Step 1: Event Handler
+        // Step 2: Collect Data
+        // Step 2a: collect raw data
+        //Step 2b: massaging the usier data (i.e lowercase, strip spaces, strip special chars)
+        //Step 3: Working the algorithm - Is this word the same forwards and backwards
+        //Step 4: Output to the user
+        $("#pHide").hide();
+        $("#btnClear").hide();
+        $("#btnTC").on("click", function () {
+            $("#pHide").show();
+            $("#btnClear").show();
+
+            var userWord = $("#txtTC").val().toLowerCase().replace(/\s/g, "").replace(/\./g, "").replace(/\,/g, "");
+
+            let revWord = userWord.split("").reverse().join("");
+
+            if (revWord === userWord) {
+                return $("#pTC").text(`Your input ${userWord} is a palindrome!`)
+            }
+            else {
+                $("#pTC").text(`Your input ${userWord} is NOT a palindrome.`)
+            }
+        });
+
+        $("#btnClear").on("click", function () {
+            $("#pHide").hide();
+            $("#txtTC").val("")
+            $("#pTC").text("")
+            $("#btnClear").hide();
+        })
+
+
+
+    </script>
+</body>
+
+</html>
