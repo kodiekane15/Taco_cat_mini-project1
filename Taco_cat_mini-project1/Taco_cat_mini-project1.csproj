@@ -67,11 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\prism.css" />
-    <Content Include="js\prism.js" />
-    <Content Include="pages\Code.html" />
-    <Content Include="pages\Index.html" />
-    <Content Include="pages\Solve.html" />
+    <Content Include="CSS\prism.css" />
+    <Content Include="Scripts\prism.js" />
+    <Content Include="Code.html" />
+    <Content Include="Index.html" />
+    <Content Include="Solve.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +85,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
