@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\prism.css" />
+    <Content Include="img\wlc-bg1.jpg" />
     <Content Include="Scripts\prism.js" />
     <Content Include="Code.html" />
     <Content Include="Index.html" />
