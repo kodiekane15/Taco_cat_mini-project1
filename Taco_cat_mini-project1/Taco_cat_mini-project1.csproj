@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\prism.css" />
+    <Content Include="favicon.ico" />
     <Content Include="img\wlc-bg1.jpg" />
     <Content Include="Scripts\prism.js" />
     <Content Include="Code.html" />
@@ -79,6 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Coding Challenge - TacoCat.pdf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
