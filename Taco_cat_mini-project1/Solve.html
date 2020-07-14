@@ -20,11 +20,11 @@
 			margin-top: 20px;
 		}
 		.welcome_Wrap {
-			background: url('img/wlc-bg1.jpg');
+			background-image: url('img/wlc-bg1.jpg');
 			/* The image used */
 
 			/* Full height */
-			height: 100%;
+			height: 100vh;
 			/* Center and scale the image nicely */
 			background-position: center;
 			background-repeat: no-repeat;
@@ -33,6 +33,37 @@
 		.textColor {
 			color: #08d655;
 		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+            
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			z-index: 1;
+           
+
+		}
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+		.dropdown:hover + .dropdown-content {
+			display: block;
+		}
+		.dropbtn {
+            
+            font-size: 16px;
+            border: none;
+		}
+		
+
+
     </style>
 </head>
 
@@ -65,13 +96,21 @@
                             <a class="nav-link" href="//kodiekane.netlify.app/">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                            <!--Ask about dropdown menu
+                            <div class="dropdown">
+                            <p class="dropbtn nav-link">Dropdown</p>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            </div>-->
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+        
         <!-- Page Content -->
         <div class="container">
             <div class="row textColor">
@@ -99,8 +138,8 @@
             <hr />
             <div class="row">
                 <div class="col">
-                    <p id="pHide">I've gone ahead and removed all spaces and special characters to achieve better results.</p>
-                    <p id="pTC"></p>
+                    <p id="pHide" class="textColor">I've gone ahead and removed all spaces and special characters to achieve better results.</p>
+                    <p id="pTC" class="textColor"></p>
                 </div>
             </div>
             <div class="row">
@@ -108,8 +147,10 @@
                     <button id="btnClear" class="btn btn-success elWide">Clear!</button>
                 </div>
             </div>
+
         </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
