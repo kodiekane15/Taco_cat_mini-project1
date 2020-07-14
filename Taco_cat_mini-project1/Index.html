@@ -29,6 +29,15 @@
         .textColor {
             color: #08d655;
         }
+		.bgColor {
+			background-color: #343a40;
+		}
+
+
+
+		.dropdown-content a:hover {
+			background-color: transparent;
+		}
     </style>
 </head>
 
@@ -61,7 +70,16 @@
                         <a class="nav-link" href="//kodiekane.netlify.app/">Portfolio</a>
                     </li>
                     <li class="nav-item">
-
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown">Dropdown</a>
+                            <div class="dropdown-menu bgColor">
+                                <div class="dropdown-content">
+                                    <a href="//kodiekane-sumofallfear.netlify.app/" class="dropdown-item nav-link">Sum of All Fears</a>
+                                    <a href="//kodiekane-fizzbuzz.netlify.app/" class="dropdown-item nav-item nav-link">Fizz-Buzz</a>
+                                    <a href="#" class="dropdown-item nav-item nav-link">Sunset Hills</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -80,7 +98,7 @@
                         <li>Technologies used: HTML, JavaScript, jQuery, CSS, and Bootstrap 4</li>
                     </ul>
 
-                    <a href="Coding Challenge - TacoCat.pdf">Coding Challenge - TacoCat.pdf</a>
+                    <!--<a href="Coding Challenge - TacoCat.pdf">Coding Challenge - TacoCat.pdf</a>-->
 
                 </div>
             </div>
